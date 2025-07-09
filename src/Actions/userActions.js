@@ -33,7 +33,7 @@ export const signup = (firstName, lastName, email, password) => {
         };
 
         const body = { firstName, lastName, email, password };
-        const url = "http://localhost:4000/user/signup";
+        const url = "https://notes-app-backend-tq8j.onrender.com/user/signup";
 
         axios.post(url, body, header)
             .then((response) => {
@@ -63,7 +63,7 @@ export const signin = (email, password) => {
         };
 
         const body = { email, password };
-        const url = "http://localhost:4000/user/signin";
+        const url = "https://notes-app-backend-tq8j.onrender.com/user/signin";
 
         axios.post(url, body, header)
             .then((response) => {

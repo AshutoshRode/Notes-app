@@ -28,7 +28,7 @@ export const addNote = (title, contents) => {
         };
         const body = { title, contents };
 
-        const url = "http://localhost:4000/notes";
+        const url = "https://notes-app-backend-tq8j.onrender.com/notes";
         axios
             .post(url, body, header)
             .then((response) => {
@@ -58,7 +58,7 @@ export const getNotes = () => {
             },
         };
 
-        const url = "http://localhost:4000/notes";
+        const url = "https://notes-app-backend-tq8j.onrender.com/notes";
         axios
             .get(url, header)
             .then((response) => {
@@ -90,7 +90,7 @@ export const updateNote = (id, title, contents) => {
 
         const body = { title, contents };
 
-        const url = `http://localhost:4000/notes/${id}`;
+        const url = `https://notes-app-backend-tq8j.onrender.com/notes/${id}`;
         axios
             .put(url, body, header)
             .then((response) => {
@@ -120,7 +120,7 @@ export const deleteNote = (id) => {
             },
         };
 
-        const url = `http://localhost:4000/notes/${id}`;
+        const url = `https://notes-app-backend-tq8j.onrender.com/notes/${id}`;
         axios
             .delete(url, header)
             .then((response) => {

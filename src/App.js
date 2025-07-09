@@ -11,9 +11,10 @@ import EditNoteScreen from './Screens/EditNoteScreen';
 function App() {
   return (
     <div>
-
+     
       <BrowserRouter>
         <Navigation />
+  
         <div className="container">
           <Routes>
 
@@ -26,8 +27,10 @@ function App() {
             <Route path="/edit-note/:id" element={<EditNoteScreen />} />
 
           </Routes>
+       
         </div>
       </BrowserRouter>
+    
     </div>
   );
 }
