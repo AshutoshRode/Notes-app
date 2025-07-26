@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-function Header(props) {
+function Header({ title }) {
   return (
-    <div>
-        <h1 className='title'> {props.title}</h1>
-      
-    </div>
-  )
-}
-Header.defaultProps = { 
-    title:'',
+    <header className="bg-blue-500 text-white py-4 shadow-md ">
+      <div className="max-w-6xl mx-auto px-4">
+        <h1 className="text-2xl font-semibold">{title}</h1>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+Header.defaultProps = {
+  title: '',
+};
+
+export default Header;

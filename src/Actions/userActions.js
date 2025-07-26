@@ -16,6 +16,7 @@ import axios from "axios";
 export const logout = () => {
     return (dispatch) => {
         sessionStorage.removeItem('token');
+        localStorage.removeItem('userInfo'); // ✅ Clear from localStorage
         dispatch({ type: USER_SIGNOUT });
         document.location.href = '/signin';
     };
@@ -71,6 +72,9 @@ export const signin = (email, password) => {
                     type: USER_SIGNIN_SUCCESS,
                     payload: response.data,
                 });
+
+                // ✅ Save user info to localStorage
+                localStorage.setItem('userInfo', JSON.stringify(response.data));
             })
             .catch((error) => {
                 dispatch({
