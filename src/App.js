@@ -7,14 +7,15 @@ import AddNoteScreen from './Screens/AddNoteScreen';
 import AboutScreen from './Screens/AboutScreen';
 import Navigation from './Components/Navigation';
 import EditNoteScreen from './Screens/EditNoteScreen';
+import ProfileScreen from "./Screens/ProfileScreen";
 
 function App() {
   return (
     <div>
-     
+
       <BrowserRouter>
         <Navigation />
-  
+
         <div className="container">
           <Routes>
 
@@ -26,11 +27,13 @@ function App() {
             <Route path="/about" element={<AboutScreen />} />
             <Route path="/edit-note/:id" element={<EditNoteScreen />} />
 
+            <Route path="/profile" element={<ProfileScreen />} />
+
           </Routes>
-       
+
         </div>
       </BrowserRouter>
-    
+
     </div>
   );
 }
